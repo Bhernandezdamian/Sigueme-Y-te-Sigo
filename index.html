@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sígueme y te Sigo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sígueme y te Sigo</h1>
+    <button id="instructionsButton">Instrucciones</button>
+    <div id="instructions" style="display: none;">
+      <p>¡Bienvenido a "Sígueme y te Sigo"! Esta plataforma te ofrece la oportunidad de compartir tu página de Facebook y descubrir nuevas páginas de otros usuarios. La idea es simple: comparte tu URL y sé honesto al seguir a otros usuarios, interactuando genuinamente con su contenido. Juntos, podemos construir una comunidad sólida y apoyarnos mutuamente en nuestras redes sociales. ¡Comienza compartiendo tu URL y explorando las páginas de los demás!</p>
+    </div>
+    <form id="facebookForm">
+      <label for="facebookUrl">URL de tu página de Facebook:</label>
+      <input type="text" id="facebookUrl" name="facebookUrl" required>
+      <button type="submit">Compartir</button>
+    </form>
+    <form id="searchForm">
+      <label for="searchNumber">Buscar URL por número:</label>
+      <input type="number" id="searchNumber" name="searchNumber" min="1">
+      <button type="button" id="searchButton">Buscar</button>
+    </form>
+    <div id="facebookList"></div>
+  </div>
+
+  <!-- Utiliza la versión 8.x.x del SDK de Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="firebase.js"></script>
+</body>
+</html>
